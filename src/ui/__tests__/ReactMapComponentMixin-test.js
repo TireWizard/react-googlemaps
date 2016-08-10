@@ -45,7 +45,7 @@ describe('ReactMapComponentMixin', function() {
 
     it('should add all initial options on mount', function() {
       var React = require('react');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(
@@ -63,7 +63,7 @@ describe('ReactMapComponentMixin', function() {
 
     it('should add all options on mount', function() {
       var React = require('react');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(
@@ -223,7 +223,7 @@ describe('ReactMapComponentMixin', function() {
     it('should add all events on mount', function() {
       var React = require('react');
       var GoogleMapsAPI = require('../../GoogleMapsAPI');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(

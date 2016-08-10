@@ -45,14 +45,14 @@ describe('ReactMapComponentMixin', function() {
 
     it('should add all initial options on mount', function() {
       var React = require('react');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(
         React.createElement(Component, {
-          initialOption1: noop, 
-          initialOption2: null, 
-          initialOption3: 'hi', 
+          initialOption1: noop,
+          initialOption2: null,
+          initialOption3: 'hi',
           initialNotOption: noop})
       );
 
@@ -63,14 +63,14 @@ describe('ReactMapComponentMixin', function() {
 
     it('should add all options on mount', function() {
       var React = require('react');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(
         React.createElement(Component, {
-          option1: noop, 
-          option2: null, 
-          option3: 'hi', 
+          option1: noop,
+          option2: null,
+          option3: 'hi',
           notOption: noop})
       );
 
@@ -86,7 +86,7 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          option1: noop, 
+          option1: noop,
           notOption: noop}),
         container
       );
@@ -94,7 +94,7 @@ describe('ReactMapComponentMixin', function() {
       node.setOptions.mockClear();
       React.render(
         React.createElement(Component, {
-          option1: noop, 
+          option1: noop,
           option2: noop}),
         container
       );
@@ -111,8 +111,8 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          option1: noop, 
-          option2: noop, 
+          option1: noop,
+          option2: noop,
           notOption: noop}),
         container
       );
@@ -120,8 +120,8 @@ describe('ReactMapComponentMixin', function() {
       node.setOptions.mockClear();
       React.render(
         React.createElement(Component, {
-          option1: noop2, 
-          option2: null, 
+          option1: noop2,
+          option2: null,
           notOption: noop2}),
         container
       );
@@ -137,8 +137,8 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          option1: noop, 
-          option2: noop, 
+          option1: noop,
+          option2: noop,
           notOption: noop}),
         container
       );
@@ -161,8 +161,8 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          event1: true, 
-          map: map, 
+          event1: true,
+          map: map,
           notEvent: 'as'}),
         container
       );
@@ -223,14 +223,14 @@ describe('ReactMapComponentMixin', function() {
     it('should add all events on mount', function() {
       var React = require('react');
       var GoogleMapsAPI = require('../../GoogleMapsAPI');
-      var ReactTestUtils = require('react/lib/ReactTestUtils');
+      var ReactTestUtils = require('react-addons-test-utils');
       var noop = jest.genMockFn();
 
       ReactTestUtils.renderIntoDocument(
         React.createElement(Component, {
-          event1: noop, 
-          event2: noop, 
-          sideEffectOption: true, 
+          event1: noop,
+          event2: noop,
+          sideEffectOption: true,
           notEvent: noop})
       );
 
@@ -248,7 +248,7 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          event1: noop, 
+          event1: noop,
           notEvent: noop}),
         container
       );
@@ -256,8 +256,8 @@ describe('ReactMapComponentMixin', function() {
       GoogleMapsAPI.event.addListener.mockClear();
       React.render(
         React.createElement(Component, {
-          event1: noop, 
-          event2: noop, 
+          event1: noop,
+          event2: noop,
           sideEffectOption: true}),
         container
       );
@@ -301,9 +301,9 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          event1: noop, 
-          event2: noop, 
-          notEvent: noop, 
+          event1: noop,
+          event2: noop,
+          notEvent: noop,
           sideEffectOption: true}),
         container
       );
@@ -329,9 +329,9 @@ describe('ReactMapComponentMixin', function() {
       var container = document.createElement('div');
       React.render(
         React.createElement(Component, {
-          event1: noop, 
-          event2: noop, 
-          notEvent: noop, 
+          event1: noop,
+          event2: noop,
+          notEvent: noop,
           sideEffectOption: true}),
         container
       );
